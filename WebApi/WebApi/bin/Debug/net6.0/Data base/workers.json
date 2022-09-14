@@ -1,0 +1,38 @@
+[
+  {
+    "idNumber": 42,
+    "name": "string",
+    "lastName": "string",
+    "dateAdmisson": "string",
+    "dateBirth": "string",
+    "rol": "string",
+    "password": "string"
+  },
+  {
+    "idNumber": 12,
+    "name": "string",
+    "lastName": "string",
+    "dateAdmisson": "string",
+    "dateBirth": "string",
+    "rol": "string",
+    "password": "string"
+  },
+  {
+    "idNumber": 112,
+    "name": "string",
+    "lastName": "string",
+    "dateAdmisson": "string",
+    "dateBirth": "string",
+    "rol": "string",
+    "password": "string"
+  },
+  {
+    "idNumber": 9,
+    "name": "string",
+    "lastName": "string",
+    "dateAdmisson": "string",
+    "dateBirth": "string",
+    "rol": "string",
+    "password": "string"
+  }
+]
