@@ -89,3 +89,36 @@ C:\Users\Lenovo\Documents\GitHub\TallerTEC\WebApi\WebApi\obj\Debug\net6.0\static
 C:\Users\Lenovo\Documents\GitHub\TallerTEC\WebApi\WebApi\obj\Debug\net6.0\scopedcss\bundle\WebApi.styles.css
 C:\Users\Lenovo\Documents\GitHub\TallerTEC\WebApi\WebApi\obj\Debug\net6.0\WebApi.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\TallerTEC\WebApi\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\appsettings.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Data base\clients.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Data base\office.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Data base\quote.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Data base\service.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Data base\workers.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\WebApi.exe
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\WebApi.deps.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\WebApi.runtimeconfig.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\WebApi.dll
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\WebApi.pdb
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.csproj.AssemblyReference.cache
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfoInputs.cache
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfo.cs
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.csproj.CoreCompileInputs.cache
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\scopedcss\bundle\WebApi.styles.css
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.csproj.CopyComplete
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.dll
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\refint\WebApi.dll
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.pdb
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
+D:\Proyectos\Repositorios\TallerTECAPI\WebApi\WebApi\obj\Debug\net6.0\ref\WebApi.dll

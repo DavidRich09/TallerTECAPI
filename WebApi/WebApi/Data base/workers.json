@@ -34,5 +34,23 @@
     "dateBirth": "string",
     "rol": "string",
     "password": "string"
+  },
+  {
+    "idNumber": 89,
+    "name": "TonyGOD",
+    "lastName": "Achoy",
+    "dateAdmisson": "21/21/12",
+    "dateBirth": "21/21/12",
+    "rol": "Spiker",
+    "password": "string"
+  },
+  {
+    "idNumber": 23,
+    "name": "da",
+    "lastName": "dad",
+    "dateAdmisson": "dad",
+    "dateBirth": "dasd",
+    "rol": "Worker",
+    "password": "dasd"
   }
 ]
