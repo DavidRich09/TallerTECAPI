@@ -359,5 +359,57 @@ namespace WebApi.Data_base
 
             return content;
         }
+
+
+        public List<Bills> GetBills(int idClient)
+        {
+            var id = idClient.ToString();
+
+            var bills = new List<Bills>();
+
+            var quotes = LoadQuotes();
+
+            var services = LoadServices();
+
+            for (int quote = 0; quote < quotes.Count; quote++)
+            {
+
+                if (id == quotes[quote].Client)
+                {
+                    var date = quotes[quote].Date;
+                    var mecanic = quotes[quote].Responsible;
+                    string serviceQuote = "";
+                    int cost = 0;
+                    bool flag = false;
+
+                    for (int service = 0; service < services.Count; service++)
+                    {
+
+                        if (services[service].Name == quotes[quote].Service)
+                        {
+                            serviceQuote = services[service].Name;
+                            cost = Int32.Parse(services[service].Price);
+                            flag = true;
+                        }
+
+                    }
+
+                    if(flag)
+                    {
+                        Bills temp = new Bills();
+                        temp.cost = cost;
+                        temp.service = serviceQuote;
+                        temp.date = date;
+                        temp.mecanic = mecanic;
+                        bills.Add(temp);
+                    }
+                }
+
+            }
+
+            return bills;
+
+        }
+        
     }
 }

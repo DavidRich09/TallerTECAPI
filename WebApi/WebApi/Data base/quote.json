@@ -6,6 +6,15 @@
     "Service": "Cambio de aceite",
     "Client": "123",
     "Office": "Sucursal Cartago",
-    "Date":  "4/6/22"
+    "Date": "4/6/22"
+  },
+  {
+    "Responsible": "Ingrid Vargas",
+    "Assistant": "Bryan Martinez",
+    "LicensePlate": "GTO-986",
+    "Service": "Cambio de llantas",
+    "Client": "123",
+    "Office": "Sucursal Cartago",
+    "Date": "16/9/2022"
   }
 ]
