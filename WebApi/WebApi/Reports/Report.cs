@@ -2,12 +2,26 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text.Json;
+using Newtonsoft.Json;
 using SautinSoft.Document;
 using SautinSoft.Document.Drawing;
 using SautinSoft.Document.MailMerging;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace ReportApp
 {
+    
+    public class Quote
+    {
+        public string Responsible { get; set; }
+        public string Assistant { get; set; }
+        public string LicensePlate { get; set; }
+        public string Service { get; set; }
+        public string Client { get; set; }
+        public string Office { get; set; }
+        public string Date { get; set; }
+
+    }
     class Appointment
     {
         public string LicencePlate { get; set; }
@@ -22,7 +36,7 @@ namespace ReportApp
         static void Main(string[] args)
         {
             // 1. Get json data
-            string json = CreateJsonObject();
+            string json = CreateJsonObject("asdf");
 
             // 2. Show json to Console.
             Console.WriteLine(json);
@@ -30,6 +44,8 @@ namespace ReportApp
             // 3. Generate report based on .docx template and json.
             GeneratePdfReport(json);
         }
+        
+        
 
         public static void GeneratePdfReport(string json)
         {
@@ -61,33 +77,69 @@ namespace ReportApp
             // Open the result for demonstration purposes.
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(resultPath) { UseShellExecute = true });
         }
-        public static string CreateJsonObject()
-        {
-            string json = String.Empty;
-            List<Appointment> appointments = new List<Appointment>
-            {
-                new Appointment() {LicencePlate = "965210",
-                    Service = "Cambio de llantas",
-                    Client = "7474",
-                    Office = "Cartago",
-                    Visitas = 1},
-                new Appointment() {LicencePlate = "521036",
-                    Service = "Cambio de aceite",
-                    Client = "20158",
-                    Office = "Cartago",
-                    Visitas = 3},
-                new Appointment() {LicencePlate = "FDR632",
-                    Service = "Mantenimiento 10k km",
-                    Client = "74236",
-                    Office = "Cartago",
-                    Visitas = 6
-                }
-            };
-            
 
+        
+        static List<Appointment> appointments = new List<Appointment>();
+        public static string CreateJsonObject(string path)
+        {
+            string content;
+
+            using(var reader = new StreamReader(path))
+            {
+                content = reader.ReadToEnd();
+            }
+            
+            List<Quote> jsonData = JsonConvert.DeserializeObject<List<Quote>>(content);
+            
+            Console.WriteLine(jsonData);
+
+            Appointment nuevo = new Appointment() {LicencePlate = "NULL", Service = "NULL", Client = "NULL", Office = "NULL", Visitas = 0};
+            
+            int i = 0;
+            while (jsonData.Count > 0)
+            {
+                i = 0;
+                string plate = jsonData[i].LicensePlate;
+                string services = jsonData[i].Service;
+                string clients = jsonData[i].Client;
+                string offices = jsonData[i].Office;
+                i += 1;
+                for (int j = 1; j < jsonData.Count; j++)
+                {
+                    if (plate == jsonData[j].LicensePlate)
+                    {
+                        services += "\n" + jsonData[j].Service;
+                        clients += "\n" + jsonData[j].Client;
+                        offices += "\n" + jsonData[j].Office;
+                        jsonData.RemoveAt(j);
+                        j -= 1;
+                        i += 1;
+                    }
+                }
+
+                nuevo = new Appointment()
+                {
+                    LicencePlate = plate,
+                    Service = services,
+                    Client = clients,
+                    Office = offices,
+                    Visitas = i
+                };
+
+                appointments.Add(nuevo);
+                
+                jsonData.RemoveAt(0);
+
+            }
+            
+            List<Appointment> sorted = appointments.OrderBy(x => x.Visitas).ToList();
+
+            sorted.Reverse();
+            
+            string json = String.Empty;
             // Make serialization to JSON format.
             JsonSerializerOptions options = new() {IncludeFields = true };
-            json = JsonSerializer.Serialize(appointments, options);
+            json = JsonSerializer.Serialize(sorted, options);
             return json;
         }
 
