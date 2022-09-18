@@ -9,6 +9,8 @@ namespace WebApi.Models
         public string Manager { get; set; }
         public string StartManagement { get; set; }
         public string StartOperation { get; set; }
+        public Address Address { get; set; }
+        public OfficePhones Phone { get; set; }
 
     }
 
