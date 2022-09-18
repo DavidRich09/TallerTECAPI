@@ -12,7 +12,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("requestService")]
-        public dynamic RequestService(int id)
+        public dynamic RequestBills(int id)
         {
 
             List<Bills> list = jsonManager.GetBills(id);

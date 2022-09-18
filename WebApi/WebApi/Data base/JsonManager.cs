@@ -73,7 +73,7 @@ namespace WebApi.Data_base
 
             for (int i = 0; i < clientList.Count ; i++)
             {
-                if (clientList[i].Id == client.Id)
+                if (clientList[i].Id == client.Id || clientList[i].User == client.User)
                 {
                     return false;
                 }
@@ -216,7 +216,7 @@ namespace WebApi.Data_base
 
             for (int i = 0; i < QuoteList.Count ; i++)
             {
-                if (QuoteList[i].LicensePlate == quote.LicensePlate && QuoteList[i].Date == quote.Date)
+                if (QuoteList[i].LicensePlate == quote.LicensePlate && QuoteList[i].Date == quote.Date && QuoteList[i].Service == quote.Service)
                 {
                     return false;
                 }
