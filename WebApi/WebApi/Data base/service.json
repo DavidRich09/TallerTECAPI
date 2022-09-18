@@ -3,6 +3,42 @@
     "Name": "Cambio de aceite",
     "Cost": "50000",
     "EstimatedDuration": "1 hora",
-    "StartOperation": "28-02-12"
+    "Price": "90000"
+  },
+  {
+    "Name": "Cambio de llantas",
+    "Cost": "25000",
+    "EstimatedDuration": "5 min",
+    "Price": "75000"
+  },
+  {
+    "Name": "Alineado y tramado",
+    "Cost": "30000",
+    "EstimatedDuration": "55 min",
+    "Price": "120000"
+  },
+  {
+    "Name": "Revision 5k km",
+    "Cost": "15000",
+    "EstimatedDuration": "5 min",
+    "Price": "100000"
+  },
+  {
+    "Name": "Revision 10k km",
+    "Cost": "15000",
+    "EstimatedDuration": "5 min",
+    "Price": "150000"
+  },
+  {
+    "Name": "Revision 15k km",
+    "Cost": "15000",
+    "EstimatedDuration": "5 min",
+    "Price": "200000"
+  },
+  {
+    "Name": "Revision 20k km",
+    "Cost": "15000",
+    "EstimatedDuration": "5 min",
+    "Price": "250000"
   }
 ]

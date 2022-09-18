@@ -43,5 +43,59 @@
     "dateBirth": "21/21/12",
     "rol": "Spiker",
     "password": "string"
+  },
+  {
+    "idNumber": 23,
+    "name": "da",
+    "lastName": "dad",
+    "dateAdmisson": "dad",
+    "dateBirth": "dasd",
+    "rol": "Worker",
+    "password": "dasd"
+  },
+  {
+    "idNumber": 0,
+    "name": "string",
+    "lastName": "string",
+    "dateAdmisson": "string",
+    "dateBirth": "string",
+    "rol": "string",
+    "password": "string"
+  },
+  {
+    "idNumber": 231,
+    "name": "sAA",
+    "lastName": "DAD",
+    "dateAdmisson": "DAD",
+    "dateBirth": "DAD",
+    "rol": "Worker",
+    "password": "DAA"
+  },
+  {
+    "idNumber": 321,
+    "name": "dasd",
+    "lastName": "adas",
+    "dateAdmisson": "dasd",
+    "dateBirth": "dasd",
+    "rol": "Worker",
+    "password": "dasd"
+  },
+  {
+    "idNumber": 213,
+    "name": "dasd",
+    "lastName": "dasd",
+    "dateAdmisson": "d",
+    "dateBirth": "asd",
+    "rol": "Worker",
+    "password": "ddasd"
+  },
+  {
+    "idNumber": 119312,
+    "name": "dasd",
+    "lastName": "dasd",
+    "dateAdmisson": "dada",
+    "dateBirth": "dassd",
+    "rol": "Worker",
+    "password": "dasd"
   }
 ]

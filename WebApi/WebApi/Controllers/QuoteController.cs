@@ -10,6 +10,16 @@ namespace WebApi.Controllers
     {
         private JsonManager jsonManager = new JsonManager();
 
+        [HttpGet]
+        [Route("requestService")]
+        public dynamic RequestService(int id)
+        {
+
+            List<Bills> list = jsonManager.GetBills(id);
+
+            return list;
+        }
+
         [HttpPost]
         [Route("saveQuote")]
 
@@ -61,5 +71,6 @@ namespace WebApi.Controllers
                 };
             }
         }
+
     }
 }
