@@ -65,6 +65,7 @@ namespace WebApi.Data_base
 
         }
 
+        
         public bool SaveClient(Client client)
         {
             string fullpath = path + "clients.json";

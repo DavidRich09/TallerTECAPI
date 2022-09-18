@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApi.Models;
 using WebApi.Data_base;
+using ReportApp;
+using SautinSoft.Document;
+using Newtonsoft.Json;
 
 namespace WebApi.Controllers
 {
@@ -42,6 +45,9 @@ namespace WebApi.Controllers
         [Route("saveWorker")]
         public dynamic SaveWorker(Worker worker)
         {
+            
+            string json = ReportApp.Program.CreateJsonObject(@"..\..\WebApi\WebApi\Data Base\quote.json");
+            ReportApp.Program.GeneratePdfReport(json);
 
             bool requestSuccees = jsonManager.SaveWorker (worker);
 
