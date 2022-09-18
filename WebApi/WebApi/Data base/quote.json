@@ -16,5 +16,32 @@
     "Client": "123",
     "Office": "Sucursal Cartago",
     "Date": "16/9/2022"
+  },
+  {
+    "Responsible": "a",
+    "Assistant": "a",
+    "LicensePlate": "111-112",
+    "Service": "a",
+    "Client": "a",
+    "Office": "a",
+    "Date": "09/18/2022"
+  },
+  {
+    "Responsible": "a",
+    "Assistant": "a",
+    "LicensePlate": "111-112",
+    "Service": "a",
+    "Client": "a",
+    "Office": "a",
+    "Date": "09/18/2022 00:00:00"
+  },
+  {
+    "Responsible": "a",
+    "Assistant": "a",
+    "LicensePlate": "111-111",
+    "Service": "a",
+    "Client": "a",
+    "Office": "a",
+    "Date": "09/18/2022"
   }
 ]
