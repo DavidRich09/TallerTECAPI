@@ -28,7 +28,21 @@ namespace WebApi.Data_base
             return null;
 
         }
+        public Worker RequestWorkerR()
+        {
 
+            List<Worker> contentWorkers = LoadWorkers();
+            Random rnd = new Random();
+            if (contentWorkers.Count != 0)
+            {
+                return contentWorkers[rnd.Next(contentWorkers.Count)];
+            }
+            else
+            {
+               return null;
+            }
+          
+        }
 
         public bool SaveWorker(Worker worker)
         {
@@ -96,6 +110,19 @@ namespace WebApi.Data_base
             for (int i = 0; i < clientList.Count ; i++)
             {
                 if (clientList[i].Id == Id)
+                {
+                    return clientList[i];
+                }
+            }
+            return null;
+        }
+
+        public Client RequestClientbyUser(string User)
+        {
+            List<Client> clientList = LoadClients();
+            for (int i = 0; i < clientList.Count; i++)
+            {
+                if (clientList[i].User == User)
                 {
                     return clientList[i];
                 }
@@ -233,12 +260,12 @@ namespace WebApi.Data_base
 
         }
 
-        public Quote RequestQuote(string licensePlate, string Date)
+        public Quote RequestQuote(string licensePlate, string Date, string Service)
         {
             List<Quote> QuoteList = LoadQuotes();
             for (int i = 0; i < QuoteList.Count ; i++)
             {
-                if (QuoteList[i].LicensePlate == licensePlate && QuoteList[i].Date == Date)
+                if (QuoteList[i].LicensePlate == licensePlate && QuoteList[i].Date == Date && QuoteList[i].Service == Service)
                 {
                     return QuoteList[i];
                 }
@@ -379,6 +406,7 @@ namespace WebApi.Data_base
                 {
                     var date = quotes[quote].Date;
                     var mecanic = quotes[quote].Responsible;
+                    var licensePlate = quotes[quote].LicensePlate;
                     string serviceQuote = "";
                     int cost = 0;
                     bool flag = false;
@@ -402,6 +430,7 @@ namespace WebApi.Data_base
                         temp.service = serviceQuote;
                         temp.date = date;
                         temp.mecanic = mecanic;
+                        temp.licensePlate = licensePlate;
                         bills.Add(temp);
                     }
                 }

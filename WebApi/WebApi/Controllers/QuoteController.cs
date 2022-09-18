@@ -11,7 +11,7 @@ namespace WebApi.Controllers
         private JsonManager jsonManager = new JsonManager();
 
         [HttpGet]
-        [Route("requestService")]
+        [Route("requestBills/{id}")]
         public dynamic RequestBills(int id)
         {
 
@@ -48,10 +48,10 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("requestQuote")]
-        public dynamic RequesteQuote(string LicensePlate, string Date)
+        public dynamic RequesteQuote(string LicensePlate, string Date, string Service)
         {
 
-            Quote Quote = jsonManager.RequestQuote(LicensePlate, Date);
+            Quote Quote = jsonManager.RequestQuote(LicensePlate, Date, Service);
 
             if (Quote == null)
             {

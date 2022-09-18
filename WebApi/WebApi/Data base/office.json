@@ -1,8 +1,32 @@
 [
-  {
-    "Name": "Sucursal Cartago",
-    "Manager": "Francisco Monge",
-    "StartManagement": "15-08-16",
-    "StartOperation": "28-02-12"
-  }
+    {
+        "Name": "Sucursal Cartago Centro",
+        "Manager": "Francisco Monge",
+        "StartManagement": "15/08/16",
+        "StartOperation": "28/02/12"
+    }
+    {
+        "Name": "Oreamuno de Cartago",
+        "Manager": "Jesus Fernandez",
+        "StartManagement": "15/08/16",
+        "StartOperation": "28/02/12"
+    }
+    {
+        "Name": "Pinares Curridabat",
+        "Manager": "Gerardo Zuñiga",
+        "StartManagement": "15/08/16",
+        "StartOperation": "28/02/12"
+    }
+    {
+        "Name": "Rio Oro Santa Ana",
+        "Manager": "Paula Bonilla",
+        "StartManagement": "15/08/16",
+        "StartOperation": "28/02/12"
+    }
+    {
+        "Name": "Ciudad de Panamá",
+        "Manager": "María Valverde",
+        "StartManagement": "15/08/16",
+        "StartOperation": "28/02/12"
+    }
 ]

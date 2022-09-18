@@ -6,7 +6,8 @@
     "Service": "Cambio de aceite",
     "Client": "123",
     "Office": "Sucursal Cartago",
-    "Date": "4/6/22"
+    "Date": "4/6/22",
+    "Replacements": null
   },
   {
     "Responsible": "Ingrid Vargas",
@@ -15,7 +16,8 @@
     "Service": "Cambio de llantas",
     "Client": "123",
     "Office": "Sucursal Cartago",
-    "Date": "16/9/2022"
+    "Date": "16/9/2022",
+    "Replacements": null
   },
   {
     "Responsible": "a",
@@ -24,7 +26,8 @@
     "Service": "a",
     "Client": "a",
     "Office": "a",
-    "Date": "09/18/2022"
+    "Date": "09/18/2022",
+    "Replacements": null
   },
   {
     "Responsible": "a",
@@ -33,7 +36,8 @@
     "Service": "a",
     "Client": "a",
     "Office": "a",
-    "Date": "09/18/2022 00:00:00"
+    "Date": "09/18/2022 00:00:00",
+    "Replacements": null
   },
   {
     "Responsible": "a",
@@ -42,6 +46,47 @@
     "Service": "a",
     "Client": "a",
     "Office": "a",
-    "Date": "09/18/2022"
+    "Date": "09/18/2022",
+    "Replacements": null
+  },
+  {
+    "Responsible": "a",
+    "Assistant": "a",
+    "LicensePlate": "1111111",
+    "Service": "a",
+    "Client": "a",
+    "Office": "a",
+    "Date": "09/20/2022",
+    "Replacements": []
+  },
+  {
+    "Responsible": "89",
+    "Assistant": "0",
+    "LicensePlate": "1111111",
+    "Service": "Cambio de aceite",
+    "Client": "121212121",
+    "Office": "Sucursal Cartago Centro",
+    "Date": "09/18/2022",
+    "Replacements": []
+  },
+  {
+    "Responsible": "321",
+    "Assistant": "9",
+    "LicensePlate": "1111111",
+    "Service": "Revision 5k km",
+    "Client": "123",
+    "Office": "Sucursal Cartago Centro",
+    "Date": "09/18/2022",
+    "Replacements": []
+  },
+  {
+    "Responsible": "42",
+    "Assistant": "12",
+    "LicensePlate": "123-123",
+    "Service": "Revision 5k km",
+    "Client": "123",
+    "Office": "Oreamuno de Cartago",
+    "Date": "09/20/2022",
+    "Replacements": []
   }
 ]

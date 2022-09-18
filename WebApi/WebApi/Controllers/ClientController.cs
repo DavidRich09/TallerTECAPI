@@ -22,6 +22,33 @@ namespace WebApi.Controllers
     public class ClientController
     {
         private JsonManager jsonManager = new JsonManager();
+        
+        [HttpPost]
+        [Route("saveClientClient")]
+
+        public dynamic SaveClientClient(Client c)
+        {
+            bool request = jsonManager.SaveClient(c);
+            if (request)
+            {
+                return new
+                {
+                    success = true,
+                    message = "client saved",
+                    result = c
+
+                };
+            }
+            else
+            {
+                return new
+                {
+                    success = false,
+                    message = "client repeated",
+                    result = c
+                };
+            }
+        }
 
         [HttpPost]
         [Route("saveClient")]
@@ -57,6 +84,31 @@ namespace WebApi.Controllers
         {
 
             Client client = jsonManager.RequestClient(id);
+
+            if (client == null)
+            {
+                return new
+                {
+                    success = false,
+                    message = "client not registered"
+
+                };
+            }
+            else
+            {
+                return new
+                {
+                    success = true,
+                    message = client
+                };
+            }
+        }
+        [HttpGet]
+        [Route("requestClientbyUser/{user}")]
+        public dynamic RequesteClientbyUser(string user)
+        {
+
+            Client client = jsonManager.RequestClientbyUser(user);
 
             if (client == null)
             {

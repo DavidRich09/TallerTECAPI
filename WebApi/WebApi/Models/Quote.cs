@@ -11,7 +11,7 @@ namespace WebApi.Models
         public string Client { get; set; }
         public string Office { get; set; }
         public string Date { get; set; }
-        public Replacements[] Replacements { get; set; }
+        public List<Replacements> Replacements{ get; set; }
 
     }
 
