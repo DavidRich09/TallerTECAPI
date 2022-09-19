@@ -38,7 +38,7 @@ namespace WebApi.Controllers
             }
         }
         [HttpGet]
-        [Route("requestWorker")]
+        [Route("requestWorker/{id}")]
         public dynamic RequesteWorker(int id)
         {
 

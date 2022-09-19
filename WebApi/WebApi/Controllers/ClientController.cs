@@ -79,7 +79,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("requestClient")]
+        [Route("requestClient/{id}")]
         public dynamic RequesteClient(string id)
         {
 

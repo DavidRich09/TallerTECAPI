@@ -97,5 +97,14 @@
     "dateBirth": "dassd",
     "rol": "Worker",
     "password": "dasd"
+  },
+  {
+    "idNumber": 15467864,
+    "name": "Diego",
+    "lastName": "Siguera",
+    "dateAdmisson": "04/11/2013",
+    "dateBirth": "13/09/1990",
+    "rol": "Worker",
+    "password": "noguera"
   }
 ]

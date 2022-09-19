@@ -43,5 +43,27 @@
     "Password": "123",
     "Address": [],
     "Phone": []
+  },
+  {
+    "Id": "2345654",
+    "Name": "Sergio Ramirez",
+    "User": "sram",
+    "Email": "sram@gmail.com",
+    "Password": "sram",
+    "Address": [
+      {
+        "ClientId": "2345654",
+        "Nstreet": "",
+        "Province": "",
+        "District": "",
+        "Canton": ""
+      }
+    ],
+    "Phone": [
+      {
+        "ClientId": "2345654",
+        "Phone": ""
+      }
+    ]
   }
 ]
