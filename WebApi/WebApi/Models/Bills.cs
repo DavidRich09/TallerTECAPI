@@ -8,5 +8,8 @@
         public string mecanic { get; set; }
         public string date { get; set; }
 
+        public string licensePlate { get; set; }
+
+
     }
 }

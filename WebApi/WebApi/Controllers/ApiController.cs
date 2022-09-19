@@ -15,7 +15,30 @@ namespace WebApi.Controllers
         private JsonManager jsonManager = new JsonManager();
 
         [HttpGet]
-        [Route("requestWorker")]
+        [Route("requestWorkerR")]
+        public dynamic RequesteWorkerR()
+        {
+            Worker worker = jsonManager.RequestWorkerR();
+            if (worker == null)
+            {
+                return new
+                {
+                    success = false,
+                    message = "worker not exist"
+
+                };
+            }
+            else
+            {
+                return new
+                {
+                    success = true,
+                    message = worker
+                };
+            }
+        }
+        [HttpGet]
+        [Route("requestWorker/{id}")]
         public dynamic RequesteWorker(int id)
         {
 
