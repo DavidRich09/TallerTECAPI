@@ -8,7 +8,7 @@ using SautinSoft.Document.Drawing;
 using SautinSoft.Document.MailMerging;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-namespace ReportApp
+namespace ClientReportApp
 {
     
     public class Quote
@@ -24,11 +24,10 @@ namespace ReportApp
     }
     class Appointment
     {
+        public string Client { get; set; }
         public string LicencePlate { get; set; }
         public string Service { get; set; }
-        public string Client { get; set; }
         public string Office { get; set; }
-        
         public int Visitas { get; set; }
     }
     class Program
@@ -54,7 +53,7 @@ namespace ReportApp
             var appointments = JsonSerializer.Deserialize<List<Appointment>>(json, options);
 
             // Load the template document.
-            string templatePath = @"..\..\WebApi\WebApi\Reports\template.docx";
+            string templatePath = @"..\..\WebApi\WebApi\Reports\client.docx";
 
             DocumentCore dc = DocumentCore.Load(templatePath);
 
@@ -64,7 +63,7 @@ namespace ReportApp
             // Execute the mail merge.
             dc.MailMerge.Execute(customDataSource);
 
-            string resultPath = "HistorialCitas.pdf";
+            string resultPath = "HistorialClientes.pdf";
 
             // Save the output to file
             PdfSaveOptions so = new PdfSaveOptions()
@@ -94,22 +93,23 @@ namespace ReportApp
             Console.WriteLine(jsonData);
 
             Appointment nuevo = new Appointment() {LicencePlate = "NULL", Service = "NULL", Client = "NULL", Office = "NULL", Visitas = 0};
-            
+            appointments.Clear();
+
             int i = 0;
             while (jsonData.Count > 0)
             {
                 i = 0;
-                string plate = jsonData[i].LicensePlate;
+                string plates = jsonData[i].LicensePlate;
                 string services = jsonData[i].Service;
-                string clients = jsonData[i].Client;
+                string client = jsonData[i].Client;
                 string offices = jsonData[i].Office;
                 i += 1;
                 for (int j = 1; j < jsonData.Count; j++)
                 {
-                    if (plate == jsonData[j].LicensePlate)
+                    if (client == jsonData[j].Client)
                     {
                         services += "\n" + jsonData[j].Service;
-                        clients += "\n" + jsonData[j].Client;
+                        plates += "\n" + jsonData[j].LicensePlate;
                         offices += "\n" + jsonData[j].Office;
                         jsonData.RemoveAt(j);
                         j -= 1;
@@ -119,9 +119,9 @@ namespace ReportApp
 
                 nuevo = new Appointment()
                 {
-                    LicencePlate = plate,
+                    Client = client,
+                    LicencePlate = plates,
                     Service = services,
-                    Client = clients,
                     Office = offices,
                     Visitas = i
                 };
@@ -167,13 +167,13 @@ namespace ReportApp
                 switch (valueName)
                 {
                     case "Title":
-                        value = _appointments[_recordIndex].LicencePlate;
+                        value = _appointments[_recordIndex].Client;
                         return true;
                     case "Description":
                         value = _appointments[_recordIndex].Service;
                         return true;
                     case "PictUrl":
-                        value = _appointments[_recordIndex].Client;
+                        value = _appointments[_recordIndex].LicencePlate;
                         return true;
                     case "WeightFrom":
                         value = _appointments[_recordIndex].Office;
