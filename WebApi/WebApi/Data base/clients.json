@@ -65,5 +65,27 @@
         "Phone": ""
       }
     ]
+  },
+  {
+    "Id": "229691806",
+    "Name": "Carlos Contreras",
+    "User": "CContrerasC",
+    "Email": "sermax.04@gmail.com",
+    "Password": "Generica",
+    "Address": [
+      {
+        "ClientId": "229691806",
+        "Nstreet": "",
+        "Province": "",
+        "District": "",
+        "Canton": ""
+      }
+    ],
+    "Phone": [
+      {
+        "ClientId": "229691806",
+        "Phone": ""
+      }
+    ]
   }
 ]
