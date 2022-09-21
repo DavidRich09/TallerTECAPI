@@ -4,6 +4,9 @@ using WebApi.Data_base;
 
 namespace WebApi.Controllers
 {
+    /*
+     * Clase que controla los POST y los GET de la entidad cita
+     */
     [ApiController]
     [Route("[controller]")]
     public class QuoteController
@@ -20,6 +23,10 @@ namespace WebApi.Controllers
             return list;
         }
 
+        /*
+         * Metodo para guardar una cita
+         * c: informacion de la cita
+         */
         [HttpPost]
         [Route("saveQuote")]
 
@@ -46,6 +53,12 @@ namespace WebApi.Controllers
             }
         }
 
+        /*
+         * Metodo para solicitar infomacion de una cita
+         * LicensePlate: Placa del vehiculo
+         * Date: fecha de la cita
+         * Service: servicio a realizar en la cita
+         */
         [HttpGet]
         [Route("requestQuote")]
         public dynamic RequesteQuote(string LicensePlate, string Date, string Service)

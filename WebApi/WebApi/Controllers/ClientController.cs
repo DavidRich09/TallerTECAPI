@@ -19,6 +19,10 @@ namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    
+    /**
+     * Clase que controla los POST y los GET de la entidad cliente
+     */
     public class ClientController
     {
         private JsonManager jsonManager = new JsonManager();
@@ -26,6 +30,10 @@ namespace WebApi.Controllers
         [HttpPost]
         [Route("saveClientClient")]
 
+        /**
+         * Metodo para guardar un cliente para la vista cliente
+         * c: informacion del cliente
+         */
         public dynamic SaveClientClient(Client c)
         {
             bool request = jsonManager.SaveClient(c);
@@ -50,6 +58,10 @@ namespace WebApi.Controllers
             }
         }
 
+        /*
+         * Metodo para guardar un cliente en la vista taller
+         * c: informacion del cliente
+         */
         [HttpPost]
         [Route("saveClient")]
 
@@ -78,6 +90,10 @@ namespace WebApi.Controllers
             }
         }
 
+        /*
+         * Metodo para solicitar informacion de un cliente con su cedula
+         * id: cedula del cliente
+         */
         [HttpGet]
         [Route("requestClient/{id}")]
         public dynamic RequesteClient(string id)
@@ -103,6 +119,11 @@ namespace WebApi.Controllers
                 };
             }
         }
+        
+        /*
+         * Metodo para solicitar infromacion de un cliente con su usuario
+         * user: usuario del cliente
+         */
         [HttpGet]
         [Route("requestClientbyUser/{user}")]
         public dynamic RequesteClientbyUser(string user)
@@ -129,6 +150,9 @@ namespace WebApi.Controllers
             }
         }
 
+        /*
+         * Metodo para enviar la contraseña del cliente por correo electronico
+         */
         [HttpGet]
         [Route("SendMail")]
         public dynamic SendMail(Client c)
