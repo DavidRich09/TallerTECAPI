@@ -79,7 +79,10 @@ namespace WebApi.Data_base
 
         }
 
-        
+        /**
+         * Metodo para almacenar un nuevo cliente
+         * client: infomacion del nuevo cliente
+         */
         public bool SaveClient(Client client)
         {
             string fullpath = path + "clients.json";
@@ -104,6 +107,10 @@ namespace WebApi.Data_base
 
         }
 
+        /**
+         * Metodo para solicitar un cliente por su cedula
+         * Id: cedula del cliente a solicitar 
+         */
         public Client RequestClient(string Id)
         {
             List<Client> clientList = LoadClients();
@@ -117,6 +124,10 @@ namespace WebApi.Data_base
             return null;
         }
 
+        /**
+         * Metodo para solicitar un cliente por su user
+         * user: usuario del cliente a solicitar 
+         */
         public Client RequestClientbyUser(string User)
         {
             List<Client> clientList = LoadClients();
@@ -130,6 +141,9 @@ namespace WebApi.Data_base
             return null;
         }
 
+        /**
+         * Metodo para cargar los clientes desde el json
+         */
         public List<Client> LoadClients()
         {
             string clientList = LoadJson("clients.json");
@@ -236,6 +250,10 @@ namespace WebApi.Data_base
             return offices;
         }
 
+        /**
+         * Metodo para almacenar una nueva cita
+         * quote: informacion de la nueva cita 
+         */
          public bool SaveQuote(Quote quote)
         {
             string fullpath = path + "quote.json";
@@ -260,6 +278,10 @@ namespace WebApi.Data_base
 
         }
 
+        /**
+         * Metodo para solicitar una cita almacenada
+         * 
+         */
         public Quote RequestQuote(string licensePlate, string Date, string Service)
         {
             List<Quote> QuoteList = LoadQuotes();
@@ -273,6 +295,10 @@ namespace WebApi.Data_base
             return null;
         }
 
+        
+        /**
+         * Metodo para cargar las citas desde el json
+         */
         public List<Quote> LoadQuotes()
         {
             string QuoteList = LoadJson("quote.json");

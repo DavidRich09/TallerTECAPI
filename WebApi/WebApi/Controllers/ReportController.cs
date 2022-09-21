@@ -4,12 +4,18 @@ using WebApi.Models;
 
 namespace WebApi.Controllers
 {
+    /*
+     * Clase que controla los reportes 
+     */
     [ApiController]
     [Route("[controller]")]
     public class ReportController
     {
         private JsonManager jsonManager = new JsonManager();
 
+        /*
+         * Metodo para realizar el reporte de los clientes con mas visitas
+         */
         [HttpGet]
         [Route("ClientReport")]
         public dynamic ClientReport()
@@ -19,6 +25,9 @@ namespace WebApi.Controllers
             return true;
         }
 
+        /*
+         * Metodo para realizar el reporte de los vehiculos con mas visitas
+         */
         [HttpGet]
         [Route("LicReport")]
         public dynamic LicReport()

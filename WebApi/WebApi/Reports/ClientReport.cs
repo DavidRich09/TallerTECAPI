@@ -10,7 +10,9 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace ClientReportApp
 {
-    
+    /**
+     * Estructura de la cita almacenada en la base de datos
+     */
     public class Quote
     {
         public string Responsible { get; set; }
@@ -22,6 +24,10 @@ namespace ClientReportApp
         public string Date { get; set; }
 
     }
+    
+    /**
+     * Estructura del reporte
+     */
     class Appointment
     {
         public string Client { get; set; }
@@ -45,7 +51,9 @@ namespace ClientReportApp
         }
         
         
-
+        /**
+         * Metodo para generar el pdf en base a un json
+         */
         public static void GeneratePdfReport(string json)
         {
             // Get data from json.
@@ -79,6 +87,10 @@ namespace ClientReportApp
 
         
         static List<Appointment> appointments = new List<Appointment>();
+        
+        /**
+         * Metodo para tomar la informacion de las citas y generar la infomacion del reporte
+         */
         public static string CreateJsonObject(string path)
         {
             string content;

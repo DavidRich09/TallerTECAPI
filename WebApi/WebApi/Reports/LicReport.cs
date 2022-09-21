@@ -11,6 +11,9 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 namespace LicReportApp
 {
     
+    /**
+     * Estrucutra de la cita almacenada en la base de datos
+     */
     public class Quote
     {
         public string Responsible { get; set; }
@@ -22,6 +25,10 @@ namespace LicReportApp
         public string Date { get; set; }
 
     }
+    
+    /**
+     * Estrucutra del reporte
+     */
     class Appointment
     {
         public string LicencePlate { get; set; }
@@ -45,7 +52,9 @@ namespace LicReportApp
         }
         
         
-
+        /**
+         * Metodo para generar el pdf en base a un json
+         */
         public static void GeneratePdfReport(string json)
         {
             // Get data from json.
@@ -79,6 +88,10 @@ namespace LicReportApp
 
         
         static List<Appointment> appointments = new List<Appointment>();
+        
+        /**
+         * Metodo para tomar la informacion de las citas y generar la infomacion del reporte
+         */
         public static string CreateJsonObject(string path)
         {
             string content;
