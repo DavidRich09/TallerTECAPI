@@ -36,7 +36,17 @@ namespace WebApi.Controllers
             QuoteReportApp.Program.GeneratePdfReport(json);
             return true;
         }
-        
+
+        [HttpGet]
+        [Route("OfiiceReport/{dateStart}/{dateEnd}")]
+        public dynamic BillReport(string dateStart, string dateEnd)
+        {
+            string json = OfficeReportApp.Program.CreateJsonObject(@"..\..\WebApi\WebApi\Data Base\quote.json", dateStart, dateEnd);
+            OfficeReportApp.Program.GeneratePdfReport(json);
+            return true;
+        }
+
+
 
     }
 }
