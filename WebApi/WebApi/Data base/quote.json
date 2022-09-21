@@ -7,7 +7,7 @@
     "Client": "123",
     "Office": "Sucursal Cartago",
     "Date": "4/6/22",
-    "Replacements": null
+    "Replacements": []
   },
   {
     "Responsible": "Ingrid Vargas",
@@ -27,7 +27,7 @@
     "Client": "a",
     "Office": "a",
     "Date": "09/18/2022",
-    "Replacements": null
+    "Replacements": []
   },
   {
     "Responsible": "a",
@@ -88,5 +88,50 @@
     "Office": "Oreamuno de Cartago",
     "Date": "09/20/2022",
     "Replacements": []
+  },
+  {
+    "Responsible": "Darth Vader",
+    "Assistant": "Yoda",
+    "LicensePlate": "234543",
+    "Service": "Revision 10k km",
+    "Client": "Sergio Ramirez",
+    "Office": "Cartago Centro",
+    "Date": "12/09/2022",
+    "Replacements": [
+      {
+        "LicensePlate": "",
+        "Replacement": ""
+      }
+    ]
+  },
+  {
+    "Responsible": "Yoda",
+    "Assistant": "Luke Skywalker",
+    "LicensePlate": "GMT-234",
+    "Service": "Revision 10k km",
+    "Client": "Sergio Ramirez",
+    "Office": "Oreamuno Cartago",
+    "Date": "12/08/2022",
+    "Replacements": [
+      {
+        "LicensePlate": "GMT-234",
+        "Replacement": ""
+      }
+    ]
+  },
+  {
+    "Responsible": "Darth Vader",
+    "Assistant": "Obi-Wan Kenobi",
+    "LicensePlate": "DDD-555",
+    "Service": "Cambio de Aceite",
+    "Client": "Sergio Ramirez",
+    "Office": "Oreamuno de Cartago",
+    "Date": "12/06/2022",
+    "Replacements": [
+      {
+        "LicensePlate": "DDD-555",
+        "Replacement": ""
+      }
+    ]
   }
 ]

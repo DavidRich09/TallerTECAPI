@@ -60,10 +60,10 @@ namespace WebApi.Controllers
          * Service: servicio a realizar en la cita
          */
         [HttpGet]
-        [Route("requestQuote")]
+        [Route("requestQuote/{LicensePlate}/{Date}/{Service}")]
         public dynamic RequesteQuote(string LicensePlate, string Date, string Service)
         {
-
+            Date = Date.Replace("2%F", "/");
             Quote Quote = jsonManager.RequestQuote(LicensePlate, Date, Service);
 
             if (Quote == null)

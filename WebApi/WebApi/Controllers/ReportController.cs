@@ -11,6 +11,7 @@ namespace WebApi.Controllers
     [Route("[controller]")]
     public class ReportController
     {
+        private JsonManager jsonManager = new JsonManager();
 
         /*
          * Metodo para realizar el reporte de los clientes con mas visitas
@@ -35,6 +36,16 @@ namespace WebApi.Controllers
             LicReportApp.Program.GeneratePdfReport(json);
             return true;
         }
+
+        [HttpGet]
+        [Route("QuoteReport/{LicensePlate}/{date}/{service}")]
+        public dynamic BillReport(string LicensePlate, string date, string service)
+        {
+            string json = QuoteReportApp.Program.CreateJsonObject(@"..\..\WebApi\WebApi\Data Base\quote.json", LicensePlate, date, service);
+            QuoteReportApp.Program.GeneratePdfReport(json);
+            return true;
+        }
+        
 
     }
 }
