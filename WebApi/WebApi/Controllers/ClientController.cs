@@ -201,5 +201,37 @@ namespace WebApi.Controllers
                 
             }
         }
+        
+        /**
+         * Metodo para almacenar el usuario ingresado en la aplicacion
+         */
+        [HttpPost]
+        [Route("saveactive")]
+        public dynamic SaveActive(string id)
+        {
+            UserSingleton user = UserSingleton.GetInstance();
+            user.id = id;
+
+            return new
+            {
+                success = true,
+                message = "client saved",
+            };
+        }
+        
+        /**
+         * Metodo para solicitar el usuario activo
+         */
+        [HttpGet]
+        [Route("requestactive")]
+        public dynamic RequestActive()
+        {
+            UserSingleton user = UserSingleton.GetInstance();
+            return new
+            {
+                success = true,
+                message = user.id,
+            };
+        }
     }
 }
