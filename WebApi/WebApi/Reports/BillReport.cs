@@ -111,11 +111,31 @@ namespace QuoteReportApp
                     date = jsonData[i].Date,
                     mecanic = jsonData[i].Responsible
                 };
-                Console.WriteLine( "Nuevo_Plate: "+ nuevo.licensePlate + " Nuevo_Service" + nuevo.service + " Nuevo_Date" + nuevo.date);
-                Console.WriteLine("Recib_Plate: " + licensePlate + " Recib_Service" + service + " Recib_Date" + date);
-                Console.WriteLine(" ");
+                
                 if (licensePlate == jsonData[i].LicensePlate && service == jsonData[i].Service && date == jsonData[i].Date)
                 {
+                    if (service == "Cambio de aceite")
+                    {
+                        nuevo.cost = "90000";
+                    } else if (service == "Cambio de llantas"){
+                        nuevo.cost = "75000";
+                    } else if (service == "Alineado y tramado")
+                    {
+                        nuevo.cost = "120000";
+                    } else if (service == "Revision 5k km")
+                    {
+                        nuevo.cost = "100000";
+                    } else if (service == "Revision 10k km")
+                    {
+                        nuevo.cost = "150000";
+                    } else if (service == "Revision 15k km")
+                    {
+                        nuevo.cost = "200000";
+                    } else
+                    {
+                        nuevo.cost = "250000";
+                    }
+
                     Console.WriteLine("SIGUERA");
                     appointments.Add(nuevo);
                 }
