@@ -36,7 +36,9 @@ namespace WebApi.Controllers
             LicReportApp.Program.GeneratePdfReport(json);
             return true;
         }
-
+        /*
+         * Metodo para realizar la factura de una cita
+         */
         [HttpGet]
         [Route("QuoteReport/{LicensePlate}/{date}/{service}")]
         public dynamic BillReport(string LicensePlate, string date, string service)
@@ -45,6 +47,9 @@ namespace WebApi.Controllers
             QuoteReportApp.Program.GeneratePdfReport(json);
             return true;
         }
+        /*
+         * Metodo para realizar el reporte de las sucursales con mas visitas
+         */
 
         [HttpGet]
         [Route("OfiiceReport/{dateStart}/{dateEnd}")]

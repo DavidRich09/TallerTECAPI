@@ -10,7 +10,10 @@ namespace WebApi.Data_base
     {
         private static string path = @"..\\WebApi\\Data base\\";
         private JsonSerializer serializer = new JsonSerializer();
-
+        /**
+         * Metodo para solicitar un trabajador por su cedula
+         * Id: cedula del cliente a solicitar 
+         */
         public Worker RequestWorker(int id)
         {
 
@@ -28,6 +31,9 @@ namespace WebApi.Data_base
             return null;
 
         }
+        /**
+        * Metodo para solicitar un trabajador aleatorio
+        */
         public Worker RequestWorkerR()
         {
 
@@ -43,7 +49,10 @@ namespace WebApi.Data_base
             }
           
         }
-
+        /**
+        * Metodo para almacenar un nuevo trabajador
+        * worker: infomacion del nuevo trabajador
+        */
         public bool SaveWorker(Worker worker)
         {
             string fullPath = path + "workers.json";
@@ -67,7 +76,9 @@ namespace WebApi.Data_base
             return true;
 
         }
-
+        /**
+         * Metodo para cargar los trabajadores desde el json
+         */
         public List<Worker> LoadWorkers()
         {
 
@@ -152,7 +163,10 @@ namespace WebApi.Data_base
 
             return clients;
         }
-        
+        /**
+         * Metodo para almacenar un nuevo proveedor
+         * provider: infomacion del nuevo proveedor
+         */
         public bool SaveProvider(Provider provider)
         {
             string fullpath = path + "providers.json";
@@ -177,7 +191,10 @@ namespace WebApi.Data_base
 
             return true;
         }
-
+        /**
+        * Metodo para solicitar un proveedor por su cedula juridica
+        * LegalID: cedula juridica del proveedor a solicitar 
+        */
         public Provider RequestProvider(string LegalID)
         {
             List<Provider> provList = LoadProviders();
@@ -194,7 +211,9 @@ namespace WebApi.Data_base
 
             return null;
         }
-
+        /**
+         * Metodo para cargar los proveedores desde el json
+         */
         public List<Provider> LoadProviders()
         {
             string provList = LoadJson("providers.json");
@@ -203,7 +222,10 @@ namespace WebApi.Data_base
 
             return providers;
         }
-
+        /**
+         * Metodo para almacenar una nuevo sucursal
+         * office: infomacion de la nuevo sucursal
+         */
         public bool SaveOffice(Office office)
         {
             string fullpath = path + "office.json";
@@ -227,7 +249,10 @@ namespace WebApi.Data_base
             return true;
 
         }
-
+        /**
+        * Metodo para solicitar una sucursal por su nombre
+        * Name: nombre de la sucursal a solicitar 
+        */
         public Office RequestOffice(string Name)
         {
             List<Office> OfficeList = LoadOffices();
@@ -240,7 +265,9 @@ namespace WebApi.Data_base
             }
             return null;
         }
-
+        /**
+         * Metodo para cargar las sucursales desde el json
+         */
         public List<Office> LoadOffices()
         {
             string OfficeList = LoadJson("clients.json");
@@ -307,7 +334,10 @@ namespace WebApi.Data_base
 
             return quotes;
         }
-        
+        /**
+         * Metodo para almacenar un nuevo servicio
+         * service: infomacion del nuevo servicio
+         */
         public bool SaveService(Service service)
         {
             string fullpath = path + "service.json";
@@ -331,7 +361,10 @@ namespace WebApi.Data_base
             return true;
 
         }
-
+        /**
+        * Metodo para solicitar un servicio por su nombre
+        * Name: nombre del servicio a solicitar 
+        */
         public Service RequestService(string Name)
         {
             List<Service> ServiceList = LoadServices();
@@ -344,7 +377,9 @@ namespace WebApi.Data_base
             }
             return null;
         }
-
+        /**
+         * Metodo para cargar los servicios desde el json
+         */
         public List<Service> LoadServices()
         {
             string ServiceList = LoadJson("service.json");
@@ -353,7 +388,10 @@ namespace WebApi.Data_base
 
             return services;
         }
-        
+        /**
+         * Metodo para almacenar un nuevo repuesto
+         * respuesto: infomacion del nuevo repuesto
+         */
         public bool SaveReplacement(Replacement part)
         {
             string fullpath = path + "replacement.json";
@@ -377,7 +415,11 @@ namespace WebApi.Data_base
             return true;
 
         }
-        
+        /**
+        * Metodo para solicitar un reuesto por su nombre e ID del proveedor
+        * name: nombre del repuesto a solicitar
+        * ProvLegalID: cedula juridica del proveedor del repuest a solicitar
+        */
         public Replacement RequestReplacement(string name, string ProvLegalID)
         {
             List<Replacement> ReplacementList = LoadReplacements();
@@ -390,7 +432,9 @@ namespace WebApi.Data_base
             }
             return null;
         }
-
+        /**
+         * Metodo para cargar los repuestos desde el json
+         */
         public List<Replacement> LoadReplacements()
         {
             string ReplacementList = LoadJson("replacements.json");
@@ -399,7 +443,9 @@ namespace WebApi.Data_base
             
             return replacements;
         }
-
+        /*
+         * Metodo para cargar un Json desde un path deseado
+         */
         public string LoadJson(String pathFile)
         {
             string fullPath = path + pathFile;
@@ -413,8 +459,10 @@ namespace WebApi.Data_base
 
             return content;
         }
-
-
+        /**
+         * Metodo para cargar las facturas de un cliente
+         * idClient: id del cliente del cual se desean las facturas
+         */
         public List<Bills> GetBills(int idClient)
         {
             var id = idClient.ToString();

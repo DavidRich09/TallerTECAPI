@@ -9,6 +9,10 @@ namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+
+    /**
+     * Clase que controla los POST y los GET de la entidad trabajador
+     */
     public class ApiController : ControllerBase
     {
 
@@ -16,6 +20,9 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("requestWorkerR")]
+        /**
+         * Metodo para guardar un trabajador aleatorio
+         */
         public dynamic RequesteWorkerR()
         {
             Worker worker = jsonManager.RequestWorkerR();
@@ -39,6 +46,10 @@ namespace WebApi.Controllers
         }
         [HttpGet]
         [Route("requestWorker/{id}")]
+        /**
+         * Metodo para solicitar la informacion de un trabajador con su cedula
+         * id: cedula del trabajador
+         */
         public dynamic RequesteWorker(int id)
         {
 
@@ -66,6 +77,10 @@ namespace WebApi.Controllers
 
         [HttpPost]
         [Route("saveWorker")]
+        /**
+         * Metodo para guardar un trabajador
+         * worker: informacion del trabajador
+         */
         public dynamic SaveWorker(Worker worker)
         {
             

@@ -6,13 +6,19 @@ namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    /**
+     * Clase que controla los POST y los GET de la entidad servicio
+     */
     public class ServiceController
     {
         private JsonManager jsonManager = new JsonManager();
 
         [HttpPost]
         [Route("saveService")]
-
+        /**
+        * Metodo para guardar un servicio 
+        * c: informacion del servicio
+        */
         public dynamic SaveService(Service c)
         {
             bool request = jsonManager.SaveService(c);
@@ -38,6 +44,10 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("requestService")]
+        /*
+       * Metodo para solicitar informacion de un servicio con su nombre
+       * nombre: nombre del servicio
+       */
         public dynamic RequesteService(string Name)
         {
 

@@ -12,6 +12,9 @@ using System.Globalization;
 
 namespace OfficeReportApp
 {
+    /**
+     * Estructura de la cita almacenada en la base de datos
+     */
     public class Quote
     {
         public string Responsible { get; set; }
@@ -31,7 +34,9 @@ namespace OfficeReportApp
         public string Replacement { get; set; }
 
     }
-    
+    /**
+     * Estructura del reporte
+     */
     public class Bills
     {
 
@@ -43,6 +48,9 @@ namespace OfficeReportApp
 
     class Program
     {
+        /**
+         * Metodo para generar el pdf en base a un json
+         */
         public static void GeneratePdfReport(string json)
         {
             // Get data from json.
@@ -77,7 +85,9 @@ namespace OfficeReportApp
 
 
         static List<Bills> appointments = new List<Bills>();
-
+        /**
+       * Metodo para tomar la informacion de las citas y generar la infomacion del reporte
+       */
         public static string CreateJsonObject(string path, string dateStart, string dateEnd)
         {
             string content;

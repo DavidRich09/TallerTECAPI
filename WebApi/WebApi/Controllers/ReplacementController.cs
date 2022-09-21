@@ -7,7 +7,9 @@ namespace WebApi.Controllers
 
     [ApiController]
     [Route("[controller]")]
-
+    /**
+    * Clase que controla los POST y los GET de la entidad repuesto
+    */
     public class ReplacementController
     {
 
@@ -15,7 +17,10 @@ namespace WebApi.Controllers
 
         [HttpPost]
         [Route("saveReplacement")]
-
+        /**
+         * Metodo para guardar un repuesto
+         * p: informacion del repuesto
+         */
         public dynamic SaveReplacement(Replacement p)
         {
             bool request = jsonManager.SaveReplacement(p);
@@ -41,10 +46,14 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("getReplacement")]
-
+        /*
+        * Metodo para solicitar informacion de un repuesto con la cedula juridica de su proveedor y el nombre del repuesto
+        * ProvLegalID: cedula juridica del proveedor del repuesto
+        * pname: nombre del repuesto 
+        */
         public dynamic GetProvider(string ProvLegalID, string pname)
         {
-            Replacement rep = jsonManager.RequestReplacement(ProvLegalID, pname);
+            Replacement rep = jsonManager.RequestReplacement(pname, ProvLegalID);
 
             if (rep == null)
             {

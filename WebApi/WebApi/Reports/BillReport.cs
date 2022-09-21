@@ -11,6 +11,9 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace QuoteReportApp
 {
+    /**
+     * Estructura de la cita almacenada en la base de datos
+     */
     public class Quote
     {
         public string Responsible { get; set; }
@@ -30,7 +33,9 @@ namespace QuoteReportApp
         public string Replacement { get; set; }
 
     }
-    
+    /**
+     * Estructura del reporte
+     */
     public class Bills
     {
 
@@ -46,6 +51,9 @@ namespace QuoteReportApp
 
     class Program
     {
+        /**
+         * Metodo para generar el pdf en base a un json
+         */
         public static void GeneratePdfReport(string json)
         {
             // Get data from json.
@@ -80,7 +88,9 @@ namespace QuoteReportApp
 
 
         static List<Bills> appointments = new List<Bills>();
-
+        /**
+       * Metodo para tomar la informacion de las citas y generar la infomacion del reporte
+       */
         public static string CreateJsonObject(string path, string licensePlate, string date, string service)
         {
             string content;

@@ -6,13 +6,19 @@ namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    /**
+     * Clase que controla los POST y los GET de la entidad sucursal
+     */
     public class OfficeController
     {
         private JsonManager jsonManager = new JsonManager();
 
         [HttpPost]
         [Route("saveOffice")]
-
+        /**
+         * Metodo para guardar una sucursal
+         * c: informacion del sucursal
+         */
         public dynamic SaveOffice(Office c)
         {
             bool request = jsonManager.SaveOffice(c);
@@ -38,6 +44,10 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("requestOffice")]
+        /*
+     * Metodo para solicitar informacion de una sucursal con su nombre
+     * name: nombre de la sucursal
+     */
         public dynamic RequesteOffice(string Name)
         {
 

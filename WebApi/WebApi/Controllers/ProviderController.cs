@@ -6,14 +6,19 @@ namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-
+    /**
+     * Clase que controla los POST y los GET de la entidad proveedor
+     */
     public class ProviderController
     {
         private JsonManager jsonManager = new JsonManager();
 
         [HttpPost]
         [Route("saveProvider")]
-
+        /*
+         * Metodo para guardar un proveedor
+         * p: informacion del proveedor
+         */
         public dynamic SaveProvider(Provider p)
         {
             bool request = jsonManager.SaveProvider(p);
@@ -39,7 +44,10 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("getProvider")]
-
+        /*
+         * Metodo para solicitar informacion de un proveedor con su cedula juridica
+         * LegalID: cedula juridica del proveedor
+         */
         public dynamic GetProvider(string LegalID)
         {
             Provider provider = jsonManager.RequestProvider(LegalID);
