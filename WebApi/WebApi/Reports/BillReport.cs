@@ -101,8 +101,7 @@ namespace QuoteReportApp
             int i = 0;
             while (i < jsonData.Count)
             {
-         
-             
+        
 
                 nuevo = new Bills()
                 {

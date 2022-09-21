@@ -85,7 +85,7 @@ namespace OfficeReportApp
             dateStart = dateStart.Replace("%2F", "/");
             dateEnd = dateEnd.Replace("%2F", "/");
 
-            string[] validformats = new[] { "dd/MM/yyyy", "dd-MM-yyyy","dd:MM:yyyy","d/MM/yyyy", "d-MM-yyyy","d:MM:yyyy" };
+            string[] validformats = new[] { "dd/MM/yyyy", "dd-MM-yyyy","dd:MM:yyyy","d/M/yyyy", "d-M-yyyy","d:M:yyyy" };
             
             DateTime timeStart = DateTime.ParseExact(dateStart, validformats, CultureInfo.InvariantCulture);
             DateTime timeEnd = DateTime.ParseExact(dateEnd, validformats, CultureInfo.InvariantCulture);
@@ -108,13 +108,12 @@ namespace OfficeReportApp
             int totalPanama = 0;
             
             string quoteDate = "";
-            DateTime timeQoute;
 
             int i = 0;
             while (i < jsonData.Count)
             {
 
-                timeQoute = DateTime.ParseExact(jsonData[i].Date, validformats, CultureInfo.InvariantCulture);
+                DateTime timeQoute = DateTime.ParseExact(jsonData[i].Date, validformats, CultureInfo.InvariantCulture);
                 
                 if (timeQoute >= timeStart && timeQoute <= timeEnd)
                 {
@@ -175,11 +174,15 @@ namespace OfficeReportApp
                 office = "Ciudad de Panamá"
             };
             appointments.Add(nuevo);
+            
+            List<Bills> sorted = appointments.OrderBy(x => x.totalSells).ToList();
+
+            sorted.Reverse();
 
             string json = String.Empty;
             // Make serialization to JSON format.
             JsonSerializerOptions options = new() { IncludeFields = true };
-            json = JsonSerializer.Serialize(appointments, options);
+            json = JsonSerializer.Serialize(sorted, options);
             return json;
         }
 
@@ -207,7 +210,7 @@ namespace OfficeReportApp
                 switch (valueName)
                 {
                     case "Title":
-                        value = _appointments[_recordIndex].licensePlate;
+                        value = _appointments[_recordIndex].office;
                         return true;
                         /*
                     case "Description":
@@ -221,7 +224,7 @@ namespace OfficeReportApp
                         return true;
                         */
                     case "WeightTo":
-                        value = _appointments[_recordIndex].cost;
+                        value = _appointments[_recordIndex].totalSells;
                         return true;
                     default:
                         // A field with this name was not found
